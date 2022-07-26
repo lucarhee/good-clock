@@ -64,7 +64,7 @@ def countdown(total_time):
         minutes = str(left_time // 60)
         left_time = left_time % 60
         seconds = str(left_time)
-        print(f"{hours}:{minutes}:{seconds}")
+        # print(f"{hours}:{minutes}:{seconds}")
 
         lines = 0;
         output = '';
@@ -75,6 +75,7 @@ def countdown(total_time):
                 output += Digits[int(hours[0])][lines] + SEPERATOR
                 output += Digits[int(hours[1])][lines] + BIG_SEPERATOR
             else:
+                output += Digits[0][lines] + SEPERATOR
                 output += Digits[int(hours[0])][lines] + BIG_SEPERATOR
 
             if len(minutes) > 1:
